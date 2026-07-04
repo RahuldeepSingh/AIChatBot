@@ -1,0 +1,12 @@
+# AIChatBot dependencies
+#
+# Phase 1 (rule-based CLI) needs NONE of these — it uses only the Python
+# standard library. Install these only if you want the web UI (Phase 2) or
+# LLM-powered replies (Phase 3).
+
+# Phase 2 — web UI
+flask>=3.0
+
+# Phase 3 — LLM-powered replies (pick a provider)
+anthropic>=0.40   # Claude   — needs ANTHROPIC_API_KEY (CHATBOT_BACKEND=llm)
+openai>=1.40      # OpenAI   — needs OPENAI_API_KEY    (CHATBOT_BACKEND=openai)
