@@ -1,0 +1,204 @@
+{
+  "settings": {
+    "bot_name": "RuleBot",
+    "fallback": "I'm not sure I understood that. Try asking about my capabilities, or type 'help' to see what I can do."
+  },
+  "rules": [
+    {
+      "intent": "greeting",
+      "patterns": ["\\bhi\\b", "\\bhello\\b", "\\bhey\\b", "good (morning|afternoon|evening)", "\\byo\\b", "greetings", "howdy"],
+      "responses": [
+        "Hello! How can I help you today?",
+        "Hi there! What can I do for you?",
+        "Hey! Ask me anything."
+      ]
+    },
+    {
+      "intent": "goodbye",
+      "patterns": ["\\bbye\\b", "goodbye", "see you", "see ya", "\\bcya\\b", "later", "good night", "farewell"],
+      "responses": [
+        "Goodbye! Have a great day.",
+        "See you later!",
+        "Bye! Come back anytime."
+      ]
+    },
+    {
+      "intent": "thanks",
+      "patterns": ["thank", "thanks", "thx", "appreciate", "much obliged"],
+      "responses": [
+        "You're welcome!",
+        "Happy to help!",
+        "Anytime!"
+      ]
+    },
+    {
+      "intent": "how_are_you",
+      "patterns": ["how are you", "how's it going", "how are things", "what's up", "how do you do", "you doing ok"],
+      "responses": [
+        "I'm just a bunch of rules, but I'm running great! How about you?",
+        "Doing well, thanks for asking! What can I help with?"
+      ]
+    },
+    {
+      "intent": "user_feeling_good",
+      "patterns": ["i'm (good|great|fine|happy|awesome|well)", "i am (good|great|fine|happy|awesome|well)", "doing (good|great|well|fine)", "feeling great"],
+      "responses": [
+        "That's wonderful to hear! 😊",
+        "Glad you're doing well!",
+        "Awesome! Let's keep the good vibes going."
+      ]
+    },
+    {
+      "intent": "user_feeling_bad",
+      "patterns": ["i'm (sad|down|tired|bad|unwell|sick|stressed|upset)", "i am (sad|down|tired|bad|unwell|sick|stressed|upset)", "feeling (sad|down|low|bad)", "not (good|well|great|okay)"],
+      "responses": [
+        "I'm sorry to hear that. I hope things get better soon. 💙",
+        "That sounds tough. Remember to take a little break for yourself.",
+        "Hang in there — one step at a time."
+      ]
+    },
+    {
+      "intent": "name",
+      "patterns": ["your name", "who are you", "what are you", "what should i call you"],
+      "responses": [
+        "I'm RuleBot, a simple rule-based chatbot. I match keywords to responses.",
+        "The name's RuleBot! I follow a script of rules to chat with you."
+      ]
+    },
+    {
+      "intent": "creator",
+      "patterns": ["who (made|created|built) you", "your (creator|maker|developer)", "who wrote you"],
+      "responses": [
+        "I was built as Phase 1 of the AIChatBot project — a hand-written set of rules in Python.",
+        "A developer created me using Python and a rules.json file. No AI model behind me yet!"
+      ]
+    },
+    {
+      "intent": "age",
+      "patterns": ["how old are you", "your age", "when were you (made|born|created)"],
+      "responses": [
+        "I was created on 2026-07-04, so I'm quite new!",
+        "Age is just a timestamp for me — I'm a brand-new bot."
+      ]
+    },
+    {
+      "intent": "capabilities",
+      "patterns": ["what can you do", "\\bhelp\\b", "capabilities", "commands", "options", "what do you know"],
+      "responses": [
+        "I can chat about greetings, goodbyes, feelings, jokes, and myself. I can also explain the different types of chatbots — try asking 'what types of chatbots are there'. Type 'quit' to exit."
+      ]
+    },
+    {
+      "intent": "chatbot_types",
+      "patterns": ["types of chatbot", "kinds of chatbot", "what chatbots", "chatbot categories", "different chatbots"],
+      "responses": [
+        "There are 5 main types: 1) Rule-based, 2) LLM-powered, 3) Retrieval/RAG, 4) Task/Agent, and 5) Persona bots. I'm a rule-based one! Ask 'what is a rule-based bot' to learn more."
+      ]
+    },
+    {
+      "intent": "rule_based_info",
+      "patterns": ["rule.?based", "what.*rules", "how do you work"],
+      "responses": [
+        "A rule-based bot (like me!) matches keywords or patterns in your message to pre-written responses. Simple, predictable, and free — but I can't understand anything outside my rules.",
+        "I work by checking your message against patterns in a rules.json file. If one matches, I reply with a fitting response!"
+      ]
+    },
+    {
+      "intent": "llm_info",
+      "patterns": ["what.*llm", "large language model", "\\bgpt\\b", "\\bclaude\\b", "ai bot", "smart bot"],
+      "responses": [
+        "An LLM-powered bot uses a large language model (like Claude) to understand free-form language and generate natural replies. That's Phase 3 of this project!"
+      ]
+    },
+    {
+      "intent": "project_info",
+      "patterns": ["this project", "about the project", "aichatbot", "what are you building"],
+      "responses": [
+        "This is the AIChatBot project — a step-by-step journey from a simple rule-based bot (me) toward LLM-powered, retrieval, and agent bots. Check the README for details!"
+      ]
+    },
+    {
+      "intent": "time",
+      "patterns": ["what time", "current time", "the time"],
+      "responses": [
+        "I can't read a clock yet — that's a feature for a smarter bot! But your computer's clock can tell you."
+      ]
+    },
+    {
+      "intent": "weather",
+      "patterns": ["weather", "is it raining", "how hot", "temperature outside", "forecast"],
+      "responses": [
+        "I can't check the weather — I have no internet access. A future agent-style bot could, though!",
+        "No weather powers here yet. Try a weather app for now!"
+      ]
+    },
+    {
+      "intent": "joke",
+      "patterns": ["joke", "make me laugh", "funny", "something funny"],
+      "responses": [
+        "Why do programmers prefer dark mode? Because light attracts bugs!",
+        "There are 10 kinds of people: those who understand binary and those who don't.",
+        "Why did the chatbot go to therapy? It had too many unresolved queries!",
+        "I would tell you a UDP joke, but you might not get it."
+      ]
+    },
+    {
+      "intent": "compliment",
+      "patterns": ["you're (great|awesome|smart|cool|nice|amazing|helpful)", "you are (great|awesome|smart|cool|nice|amazing|helpful)", "good bot", "well done", "i like you"],
+      "responses": [
+        "Aw, thank you! You're pretty great yourself. 😊",
+        "That means a lot — even to a bunch of rules!",
+        "Thanks! I'll keep doing my best."
+      ]
+    },
+    {
+      "intent": "insult",
+      "patterns": ["you're (dumb|stupid|useless|bad|terrible)", "you are (dumb|stupid|useless|bad|terrible)", "bad bot", "i hate you", "you suck"],
+      "responses": [
+        "Ouch! I'm still learning — I'm only a rule-based bot for now. I'll get smarter in later phases!",
+        "Fair enough — I have my limits. Feel free to add more rules to make me better!"
+      ]
+    },
+    {
+      "intent": "affirmation",
+      "patterns": ["^(yes|yeah|yep|sure|ok|okay|yup|of course)$"],
+      "responses": [
+        "Great!",
+        "Awesome, let's continue.",
+        "👍"
+      ]
+    },
+    {
+      "intent": "negation",
+      "patterns": ["^(no|nope|nah|not really|no thanks)$"],
+      "responses": [
+        "No problem!",
+        "Okay, no worries.",
+        "Alright then."
+      ]
+    },
+    {
+      "intent": "bored",
+      "patterns": ["i'm bored", "i am bored", "so bored", "nothing to do", "entertain me"],
+      "responses": [
+        "Bored? Ask me for a joke, or ask me about the different types of chatbots!",
+        "Let's fix that — want a joke? Just type 'joke'."
+      ]
+    },
+    {
+      "intent": "love",
+      "patterns": ["i love you", "do you love me", "will you marry me", "be my (friend|valentine)"],
+      "responses": [
+        "That's sweet! I'm just code, but I appreciate the sentiment. 💛",
+        "I'm flattered! Let's be great chat buddies."
+      ]
+    },
+    {
+      "intent": "help_topic",
+      "patterns": ["are you (real|human|a robot|a bot)", "are you human"],
+      "responses": [
+        "I'm 100% bot — a rule-based one, to be exact. No human behind the keyboard here!"
+      ]
+    }
+  ]
+}
